@@ -5,3 +5,22 @@ body {
     /* background-repeat: no-repeat; */
 
 }
+
+.quote-header:hover+.quote-author {
+    visibility: visible;
+    opacity: 1;
+}
+
+.quote-author {
+    visibility: hidden;
+    opacity: 0;
+    transition: ease 1s;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px black;
+}
+
+.weather-card {
+    opacity: .5;
+}

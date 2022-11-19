@@ -3,13 +3,15 @@ import { isValidProp } from "./Utils/isValidProp.js"
 import { loadState } from "./Utils/Store.js"
 
 class AppState extends EventEmitter {
-  /** @type {import('./Models/Value').Value[]} */
 
-  /** @type {import('./Models/Image').Image[]} */
+  /** @type {import('./Models/Image').Image|null} */
   images = null
 
-  /** @type {import('./Models/Image').Image[]} */
+  /** @type {import('./Models/Quote').Quote|null} */
   quotes = null
+
+  /** @type {import('./Models/Weather').Weather|null} */
+  weather = null
 }
 
 export const appState = new Proxy(new AppState(), {

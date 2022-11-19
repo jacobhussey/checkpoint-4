@@ -7,7 +7,12 @@ export class Image {
 
     get ImageTemplate() {
         return `
-        <h4 class="text-white">Image by: ${this.author}</h4>
+        <div class="m-3">
+        <h4 class="text-white text-shadow">Image by:</h4>
+        <div class="text-white text-shadow">
+        ${this.author}
+        </div>
+        </div>
         `
     }
 

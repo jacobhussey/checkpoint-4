@@ -6,9 +6,12 @@ export class Quote {
 
 
     get QuoteTemplate() {
-        return `
-        <h4>${this.content}</h4>
-        <p>${this.author}</p>
+        return ` 
+        <div class="col-6 text-shadow">
+        <h3 class="quote-header">"${this.content}"</h3>
+        <p class="quote-author">${this.author}</p>
+        </div>
+
         `
     }
 }
