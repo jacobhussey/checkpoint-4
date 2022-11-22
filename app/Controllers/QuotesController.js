@@ -11,7 +11,7 @@ function _drawQuote() {
 
 export class QuotesController {
     constructor() {
-        console.log('this is the quotes');
+        // console.log('this is the quotes');
         this.getQuotes()
         appState.on('quotes', _drawQuote)
     }

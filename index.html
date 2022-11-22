@@ -24,13 +24,41 @@
     <!-- SECTION WEATHER -->
     <section class="row justify-content-end"  id="weather">
     </section>
-
+    <!-- SECTION ClOCK -->
     <section class="row justify-content-center align-content-center mt-5">
       <div class="col-5 mt-5">
         <h1 id="clock" class="text-white text-center fw-b text-shadow mt-5"></h1>
       </div>
     </section>
-      
+    <!-- SECTION TODOs -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasLabel">Uncompleted Todo's: <span id="todos-count"></span></h5>
+
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="row" id="todos">
+
+        </div>
+      </div>
+    </div>
+    <section>
+      <div class="row justify-content-end">
+        <div class="col-3">
+          <div><button class="btn btn-primary w-50 my-2" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvas" aria-controls="offcanvasExample">
+            Todos List
+          </button>
+        </div>
+        <form action="" onsubmit="app.todoController.createTodo()">
+          <input required class="form-control w-100" type="text" id="description" name="description" required
+          minlength="3" maxlength="15" placeholder="todo description">
+          <button class="btn btn-primary text-center"><i class="mdi mdi-plus-outline"></i></button>
+        </form>
+        
+      </div>
+    </section>
       
   </main>
 

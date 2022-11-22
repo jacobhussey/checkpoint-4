@@ -8,7 +8,7 @@ class QuotesSerivce {
 
     async getQuotes() {
         const res = await quoteApi.get()
-        console.log(res.data, 'got quotes');
+        // console.log(res.data, 'got quotes');
         appState.quotes = new Quote(res.data)
     }
 

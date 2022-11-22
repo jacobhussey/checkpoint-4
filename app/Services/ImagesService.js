@@ -8,7 +8,7 @@ import { imageApi } from "./AxiosService.js"
 class ImagesServices {
     async getImage() {
         const res = await imageApi.get()
-        console.log(res.data, 'got image');
+        // console.log(res.data, 'got image');
         appState.images = new Image(res.data)
     }
 }

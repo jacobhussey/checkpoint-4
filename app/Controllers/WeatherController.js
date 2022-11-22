@@ -1,4 +1,5 @@
 import { appState } from "../AppState.js";
+import { Weather } from "../Models/Weather.js";
 import { weatherService } from "../Services/WeatherService.js";
 import { Pop } from "../Utils/Pop.js";
 import { setHTML } from "../Utils/Writer.js";
@@ -11,7 +12,7 @@ function _drawWeather() {
 
 export class WeatherController {
     constructor(){
-        console.log('this is the weather controller');
+        // console.log('this is the weather controller');
         this.getWeather()
         appState.on('weather', _drawWeather)
     }
@@ -27,9 +28,8 @@ export class WeatherController {
     }
 
     ToggleWeather() {
-        document.getElementById('farenheit').classList.toggle('visually-hidden')
-        document.getElementById('celsius').classList.toggle('visually-hidden')
+        document.querySelector(".farenheit").classList.toggle('visually-hidden')
+        document.querySelector(".celsius").classList.toggle('visually-hidden')
     }
-    
 
 }

@@ -1,15 +1,15 @@
 import { setHTML } from "../Utils/Writer.js"
 
 
-function _drawTime() {
-    let date = new Date().toLocaleTimeString()
-    setHTML('clock', date)
-}
+// function _drawTime() {
+//     let date = new Date().toLocaleTimeString()
+//     setHTML('clock', date)
+// }
 
-setInterval(_drawTime, 1000)
+// setInterval(_drawTime, 1000)
 
-export class ClockController{
-    constructor(){
-        _drawTime()
-    }
-}
+// export class ClockController{
+//     constructor(){
+//         _drawTime()
+//     }
+// }
