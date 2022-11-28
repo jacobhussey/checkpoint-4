@@ -5,7 +5,7 @@ import { setHTML } from "../Utils/Writer.js";
 
 function _drawTime() {
     let date = new Date().toLocaleTimeString()
-    setHTML('clock', date)
+    setHTML('time', date)
 }
 setInterval(_drawTime, 1000)
 

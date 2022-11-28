@@ -11,7 +11,7 @@ function _drawWeather() {
 
 
 export class WeatherController {
-    constructor(){
+    constructor() {
         // console.log('this is the weather controller');
         this.getWeather()
         appState.on('weather', _drawWeather)
@@ -27,7 +27,7 @@ export class WeatherController {
         }
     }
 
-    ToggleWeather() {
+    WeatherSwitch() {
         document.querySelector(".farenheit").classList.toggle('visually-hidden')
         document.querySelector(".celsius").classList.toggle('visually-hidden')
     }

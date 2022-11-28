@@ -1,6 +1,6 @@
 import { appState } from "../AppState.js";
 import { Todo } from "../Models/Todo.js";
-import { sandboxApi} from "./AxiosService.js"
+import { sandboxApi } from "./AxiosService.js"
 
 
 class TodoService {
@@ -22,7 +22,7 @@ class TodoService {
     async deleteTodo(todoId) {
         const res = await sandboxApi.delete('jacobhussey/todos/' + todoId)
         console.log(res.data, 'deleting todo');
-        appState.todos = appState.todos.filter(t => t.id !=todoId)
+        appState.todos = appState.todos.filter(t => t.id != todoId)
     }
 
     async prepareTodo(id) {
@@ -34,11 +34,6 @@ class TodoService {
         appState.todos.splice(index, 1, new Todo(res.data))
         appState.emit('todos')
         console.log(selectedTodo);
-        let totalTodos = appState.totalTodos 
-        let uncompleted = appState.todos.filter(t => t.completed != true)
-        totalTodos = uncompleted.length
-        appState.emit('totalTodos')
-        console.log(totalTodos);
     }
 
 }

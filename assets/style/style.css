@@ -24,3 +24,13 @@ body {
 .weather-card {
     opacity: .5;
 }
+
+.buttonShift {
+    transform: translateX(-3vw);
+
+    background-color: rgb(0, 251, 205);
+}
+
+.buttonColor {
+    background-color: rgb(0, 251, 205);
+}
